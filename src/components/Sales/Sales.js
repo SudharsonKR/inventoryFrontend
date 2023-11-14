@@ -10,7 +10,7 @@ function Sales() {
 
     useEffect(() =>{
         getSales()
-    },[])
+    })
     return (
         <SalesStyled>
             <InnerLayout>

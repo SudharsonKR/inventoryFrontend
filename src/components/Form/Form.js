@@ -8,7 +8,7 @@ import { plus } from '../../utils/icons';
 
 
 function Form() {
-    const {addSales, getSales, error, setError} = useGlobalContext()
+    const {addSales, error, setError} = useGlobalContext()
     const [inputState, setInputState] = useState({
         title: '',
         amount: '',

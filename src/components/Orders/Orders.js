@@ -10,7 +10,7 @@ function Orders() {
 
     useEffect(() =>{
         getOrders()
-    }, [])
+    })
     return (
         <OrdersStyled>
             <InnerLayout>

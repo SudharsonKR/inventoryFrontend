@@ -12,7 +12,7 @@ function Dashboard() {
     useEffect(() => {
         getSales()
         getOrders()
-    }, [])
+    })
 
     return (
         <DashboardStyled>

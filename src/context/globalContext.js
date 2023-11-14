@@ -16,9 +16,11 @@ export const GlobalProvider = ({children}) => {
     //calculate sales
     const addSales = async (sale) => {
         const response = await Axios.post(`${BASE_URL}add-sales`, sale)
+        
             .catch((err) =>{
                 setError(err.response.data.message)
             })
+            console.log(response.data)
             getSales()
     }
 
@@ -31,6 +33,7 @@ export const GlobalProvider = ({children}) => {
 
     const deleteSales = async (id) => {
         const res  = await Axios.delete(`${BASE_URL}delete-sales/${id}`)
+        console.log(res.data)
         getSales()
     }
 
@@ -50,6 +53,7 @@ export const GlobalProvider = ({children}) => {
             .catch((err) =>{
                 setError(err.response.data.message)
             })
+            console.log(response.data)
         getOrders()
     }
 
@@ -61,6 +65,7 @@ export const GlobalProvider = ({children}) => {
 
     const deleteOrders = async (id) => {
         const res  = await Axios.delete(`${BASE_URL}delete-orders/${id}`)
+        console.log(res.data)
         getOrders()
     }
 
